@@ -1,0 +1,83 @@
+@import 'mixins';
+@import 'fonts';
+
+// ----------------------------------- variable --------------------------------//
+
+$color-layout: #EEEEEE;
+$color-layout-dark: #E2DEDE;
+$color-logo: #B72E43;
+$color-logo-dark: #8F121E;
+
+$color-dark: #000000;
+$color-title: #7E157C;
+$color-base-backgound: #FAFAFA;
+$color-backlink: #DC98DB;
+$color-white: #fff;
+
+
+$title-font: 'Conv_Nefelibata-SansCanvas', sans-serif;
+$subtitle-font: 'Conv_PT_Serif-Web-Bold', sans-serif;
+$base-font: 'Conv_PT_Serif-Web-Regular', serif;
+$link-font: 'Conv_Neucha', arial;
+
+
+// ------------------------------ base styles ---------------------------------//
+
+html {
+  @include desktop() {
+    font-size: 16px;
+  }
+
+  @include laptop() {
+    font-size: 14px;
+  }
+
+  @include minilaptop() {
+    font-size: 13px;
+  }
+
+  @include tablet() {
+    font-size: 12px;
+  }
+
+  @include phone() {
+    font-size: 11px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background: $color-white;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.container {
+  max-width: rem(1100px);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+  height: 100%;
+}

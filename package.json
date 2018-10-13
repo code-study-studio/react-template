@@ -1,0 +1,92 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js",
+    "lint": "eslint ./src/js/**/*.js",
+    "test": "jest test --all --no-cache",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:one": "jest -t 'content'"
+  },
+  "jest": {
+    "setupFiles": [
+      "./jestsetup.js"
+    ],
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "\\.(svg|jpg|png)$": "<rootDir>/__mocks__/emptyModule.js",
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
+  "author": "Ivaschenko A",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^8.6.4",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-jest": "^22.4.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-hot-loader": "^1.3.3",
+    "css-loader": "^0.28.7",
+    "empty": "^0.10.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.24.1",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prefer-object-spread": "^1.2.1",
+    "eslint-plugin-react": "^7.11.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "favicons-webpack-plugin": "0.0.9",
+    "file-loader": "^1.1.5",
+    "flow": "^0.2.3",
+    "flow-bin": "^0.70.0",
+    "html-webpack-plugin": "^3.2.0",
+    "html-webpack-template": "^6.2.0",
+    "jest": "^22.4.3",
+    "node-sass": "^4.9.0",
+    "optimize-css-assets-webpack-plugin": "3.2.0",
+    "postcss-loader": "^2.1.5",
+    "source-map-loader": "^0.2.4",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.3.2",
+    "regenerator-runtime": "^0.11.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-hot-middleware": "^2.22.2",
+    "webpack-merge": "^4.1.3"
+  },
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.3.1"
+  }
+}
